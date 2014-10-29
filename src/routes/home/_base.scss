@@ -32,4 +32,16 @@ video {
 
 .learn {
   min-height: 20vh;
+  padding: 0% 4%;
+
+  h1 {
+    @include span-columns(7);
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.65em;
+  }
+}
+
+.filler {
+  min-height: 50em
 }

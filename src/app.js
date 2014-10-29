@@ -2,9 +2,11 @@
 
 require('angular');
 require('angular-ui-router');
+require('angular-scroll');
 
 var app = angular.module('whatbeer', [
   'ui.router',
+  'duScroll'
 ]);
 
 require('./components');

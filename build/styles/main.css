@@ -1,10 +1,30 @@
 @import url(http://fonts.googleapis.com/css?family=Dancing+Script:700);
 @import url(http://fonts.googleapis.com/css?family=Raleway);
+/* Neat 1.7.0
+ * http://neat.bourbon.io
+ * Copyright 2012-2014 thoughtbot, inc.
+ * MIT License */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
+
 body {
   background: black;
   margin-left: 0px;
-  font-family: sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: white; }
+
+.cursive {
+  font-family: 'Dancing Script', cursive; }
+
+.cursive.large {
+  font-size: 1.5em; }
 
 .button-link {
   padding: 20px 15px;
@@ -17,6 +37,9 @@ body {
   font-family: 'Raleway'; }
   .button-link:hover {
     opacity: 0.5; }
+  .button-link a {
+    text-decoration: none;
+    color: white; }
 
 .intro {
   padding-top: 10%;
@@ -44,7 +67,21 @@ video {
   opacity: 0.5; }
 
 .learn {
-  min-height: 20vh; }
+  min-height: 20vh;
+  padding: 0% 4%; }
+  .learn h1 {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 57.35098%;
+    text-align: center;
+    margin-top: 5%;
+    font-size: 1.65em; }
+    .learn h1:last-child {
+      margin-right: 0; }
+
+.filler {
+  min-height: 50em; }
 
 header {
   font-family: 'Dancing Script', cursive;

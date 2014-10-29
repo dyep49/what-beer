@@ -6,12 +6,18 @@
   font-size: 2em;
   margin: 0em 1em;
   width: 25%;
+
   // font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
   //  font-weight: 300;
   font-family: 'Raleway';
 
   &:hover {
     opacity: .5
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 }
 
