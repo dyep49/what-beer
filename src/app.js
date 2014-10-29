@@ -7,7 +7,7 @@ var app = angular.module('whatbeer', [
   'ui.router',
 ]);
 
-// require('./components');
+require('./components');
 require('./routes');
 // require('./helpers');
 // require('./services');

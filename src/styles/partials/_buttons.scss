@@ -1,0 +1,17 @@
+.button-link {
+  padding: 20px 15px;
+  background: rgba(0, 0, 0, .3);
+  border: 1px solid white;
+  color: white;
+  font-size: 2em;
+  margin: 0em 1em;
+  width: 25%;
+  // font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  //  font-weight: 300;
+  font-family: 'Raleway';
+
+  &:hover {
+    opacity: .5
+  }
+}
+
