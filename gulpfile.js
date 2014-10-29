@@ -7,4 +7,4 @@ var gulp = require('./gulp')([
   'sass'
 ])
 
-gulp.task('default', ['vendor', 'browserify', 'webserver', 'watch']);
+gulp.task('default', ['sass', 'vendor', 'browserify', 'webserver', 'watch']);
