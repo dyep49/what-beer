@@ -1,6 +1,4 @@
-module.exports = /* @ngInject */ function($scope) {
+module.exports = /* @ngInject */ function() {
   'use strict';
 
-  $scope.test = "whatever";
-  
 };

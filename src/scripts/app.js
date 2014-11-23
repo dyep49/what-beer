@@ -4,9 +4,12 @@ require('angular');
 require('angular-ui-router');
 require('angular-scroll');
 
+require('../partials/partials.min')
+
 var app = angular.module('whatbeer', [
   'ui.router',
-  'duScroll'
+  'duScroll',
+  'partials'
 ]);
 
 require('./components');
@@ -20,12 +23,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     .state('home', {
       url: '/',
       controller: 'HomeController',
-      templateUrl: 'src/routes/home/home.template.html'
+      templateUrl: 'src/scripts/routes/home/home.template.html'
     })
     .state('beta', {
       url: '/beta',
       controller: 'BetaController',
-      templateUrl: 'src/routes/beta/beta.template.html'
+      templateUrl: 'src/scripts/routes/beta/beta.template.html'
     });
 
   $urlRouterProvider.otherwise('/');

@@ -2,7 +2,7 @@ var gulp = require('gulp');
 
 module.exports = function() {
   
-  gulp.watch(['./src/**/*.js'], ['replace', 'jshint', 'browserify'])
+  gulp.watch(['./src/scripts/**/*.js'], ['jshint', 'browserify'])
 
   gulp.watch('src/**/*.scss', ['sass']);
 

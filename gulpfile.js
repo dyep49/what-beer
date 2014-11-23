@@ -10,4 +10,4 @@ var gulp = require('./gulp')([
   'replace'
 ])
 
-gulp.task('default', ['nghtml2js', 'replace', 'sass', 'jshint', 'vendor', 'browserify', 'webserver', 'watch']);
+gulp.task('default', ['nghtml2js', 'sass', 'jshint', 'vendor', 'browserify', 'webserver', 'watch']);

@@ -12,7 +12,7 @@
  module.exports = function() {
    gulp.task('browserify', function() {
      var opts = {
-       entries: ['./src/app.js'],
+       entries: ['./src/scripts/app.js'],
        debug: true
      }
 

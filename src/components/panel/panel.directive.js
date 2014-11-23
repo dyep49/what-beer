@@ -1,6 +1,6 @@
-'use strict';
-
 module.exports = function() {
+  'use strict';
+
   return {
     restrict: 'E',
     templateUrl: 'src/components/panel/panel.template.html',
@@ -8,5 +8,5 @@ module.exports = function() {
     link: function(scope, element) {
       
     }
-  };
-};
+  }
+}
