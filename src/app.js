@@ -22,6 +22,11 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
       controller: 'HomeController',
       templateUrl: 'src/routes/home/home.template.html'
     })
+    .state('beta', {
+      url: '/beta',
+      controller: 'BetaController',
+      templateUrl: 'src/routes/beta/beta.template.html'
+    });
 
   $urlRouterProvider.otherwise('/');
 }]);

@@ -3,6 +3,9 @@ var browserify = require('browserify');
 var source = require('vinyl-source-stream');
 var libs = require('../utils/libs.js').libs;
 var deamdify = require('deamdify');
+var uglify = require('gulp-uglify');
+var gStreamify = require('gulp-streamify');
+var size = require('gulp-size');
 
 module.exports = function() {
 
@@ -19,10 +22,11 @@ module.exports = function() {
     })
 
     return bundle
-      .transform({global: true}, deamdify)
       .bundle()
       .pipe(source('vendor.js'))
-      .pipe(gulp.dest('./build/scripts'));
+      .pipe((gStreamify(uglify())))
+      .pipe(gulp.dest('./build/scripts'))
+      .pipe((gStreamify(size())));
   })
 
 }

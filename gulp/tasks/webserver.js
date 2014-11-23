@@ -1,11 +1,14 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
+var browserSync = require('browser-sync');
 
 module.exports = function() {
   gulp.task('webserver', function() {
-    connect.server({
-      root: './',
-      livereload: true
+    browserSync({
+        server: {
+            baseDir: "./"
+        },
+        notify: false,
+        open: false
     });
-  });
+  })
 }

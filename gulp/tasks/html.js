@@ -1,10 +1,11 @@
 var gulp = require('gulp');
-var connect = require('gulp-connect');
+var reload = require('browser-sync').reload;
+
 
 module.exports = function() {
   gulp.task('html', function() {
     gulp.src(['./index.html'])
-      .pipe(connect.reload());
+      .pipe(reload({stream: true}));
   });  
 };
 

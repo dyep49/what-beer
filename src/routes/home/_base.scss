@@ -42,6 +42,61 @@ video {
   }
 }
 
-.filler {
-  min-height: 50em
+.testimonials {
+  min-height: 50em;
+  @include linear-gradient(to bottom, black, lightgrey);
+  @include outer-container(100%);
+
+  .testimonials-inner {
+    @include outer-container(65%);
+  }
+
+  .first {
+    @include span-columns(1);
+    background-image: url(/src/styles/images/dylan.jpg);
+    background-size: cover;
+    background-position: 20%;
+    height: 15em;
+    width: 15em;
+    border-radius: 10em;
+    display: inline-block;
+  }
+
+  .test-text {
+    @include span-columns(8);
+    display: inline-block;
+  }
+
+  .test-table {
+    display: table;
+    height: 15em;
+    overflow: hidden;
+
+    .test-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    blockquote {
+      // background: #f9f9f9;
+      font-size: 1.5em;
+      border-left: 10px solid darkgrey;
+      margin: 1.5em 10px;
+      padding: 0.5em 10px;
+      quotes: "\201C""\201D""\2018""\2019";
+    }
+    blockquote:before {
+      color: #ccc;
+      content: open-quote;
+      font-size: 4em;
+      line-height: 0.1em;
+      margin-right: 0.25em;
+      vertical-align: -0.4em;
+    }
+    blockquote p {
+      display: inline;
+    }
+  }
+
+
 }

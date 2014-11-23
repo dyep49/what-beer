@@ -3,7 +3,11 @@
  var source = require('vinyl-source-stream');
  var deamdify = require('deamdify');
  var libs = require('../utils/libs.js').libs;
- var connect = require('gulp-connect');
+ var uglify = require('gulp-uglify');
+ var gStreamify = require('gulp-streamify');
+ var ngAnnotate = require('browserify-ngannotate');
+ var size = require('gulp-size');
+ var reload = require('browser-sync').reload;
 
  module.exports = function() {
    gulp.task('browserify', function() {
@@ -23,7 +27,10 @@
      return bundle
        .bundle()
        .pipe(source('app.js'))
+       // .pipe((gStreamify(uglify())))
        .pipe(gulp.dest('./build/scripts'))
-       .pipe(connect.reload());
+       .pipe(reload({stream: true}))
+       .pipe((gStreamify(size())))
+
    })
  }
